@@ -1,0 +1,35 @@
+---
+title: "and_vertebrates_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{and_vertebrates_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ssandv)
+library(tidyverse)
+library(usethis)
+```
+
+```{r}
+## Make a subset of cutthroats only
+#cutthroat <- your_pkg_name::and_vertebrates %>%
+#filter(SPECIES == "ONCL")
+```
+
+```{r}
+# Create a scatterplot of length versus weight:
+ggplot(data = and_vertebrates, aes(x = LENGTH1, y = WEIGHT)) +
+ 		 geom_point()
+
+```
+
